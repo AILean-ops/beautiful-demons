@@ -46,20 +46,21 @@ As of setup, `dig corridorlights.net` and `dig www.corridorlights.net CNAME` ret
 
 ## GitHub
 
-GitHub SSH access to existing `AILean-ops` repositories works through the `github-workspace` host alias, but this machine does not currently have GitHub CLI installed or another non-secret repo-creation credential exposed.
+GitHub SSH access works through the `github-workspace` host alias.
 
-Recommended repository:
+Repository:
 
 - Owner: `AILean-ops`
 - Repo: `beautiful-demons`
 - Visibility: private
 - Remote: `git@github-workspace:AILean-ops/beautiful-demons.git`
+- Initial push completed on 2026-08-13 at commit `5f1bf36`.
 
-Once the empty private repository exists:
+Push future updates with:
 
 ```bash
 cd /Users/aileansolutions/beautiful-demons
-git push -u origin main
+git push
 ```
 
-After the first push, connect the repo in Cloudflare Dashboard -> Workers & Pages -> `corridorlights-net` -> Settings -> Builds & deployments -> Git repository.
+Connect the repo in Cloudflare Dashboard -> Workers & Pages -> `corridorlights-net` -> Settings -> Builds & deployments -> Git repository.
