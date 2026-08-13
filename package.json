@@ -1,0 +1,11 @@
+{
+  "name": "beautiful-demons",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "/Users/aileansolutions/meetings-maestro/node_modules/.bin/wrangler pages dev public",
+    "deploy": "/Users/aileansolutions/meetings-maestro/node_modules/.bin/wrangler pages deploy public --project-name corridorlights-net --branch main",
+    "deploy:preview": "/Users/aileansolutions/meetings-maestro/node_modules/.bin/wrangler pages deploy public --project-name corridorlights-net --branch preview"
+  }
+}
