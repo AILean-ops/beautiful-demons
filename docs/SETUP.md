@@ -30,19 +30,20 @@ Cloudflare Pages direct upload is working.
 - Cloudflare zone: `corridorlights.net` (`e79457ade9ee1d608552166b4d355ff1`)
 - Zone nameservers: `adam.ns.cloudflare.com`, `kay.ns.cloudflare.com`
 
-Custom domains were added through the Cloudflare Pages API on 2026-08-13:
+Custom domains were added through the Cloudflare Pages API on 2026-08-13 and verified active with SSL enabled the same day:
 
-- `corridorlights.net`: pending verification
-- `www.corridorlights.net`: pending verification
+- `https://corridorlights.net/`
+- `https://www.corridorlights.net/`
 
-As of setup, `dig corridorlights.net` and `dig www.corridorlights.net CNAME` returned no DNS answer. If Cloudflare does not finish this automatically, finish it in the dashboard:
+DNS records in Cloudflare route both hostnames through the Pages project:
 
-1. Cloudflare Dashboard -> Workers & Pages -> `corridorlights-net` -> Custom domains.
-2. Confirm `corridorlights.net` and `www.corridorlights.net` are attached.
-3. If prompted, let Cloudflare create the DNS records.
-4. In DNS for `corridorlights.net`, ensure:
-   - `corridorlights.net` routes to `corridorlights-net.pages.dev`
-   - `www.corridorlights.net` routes to `corridorlights-net.pages.dev`
+- `corridorlights.net` -> `corridorlights-net.pages.dev`
+- `www.corridorlights.net` -> `corridorlights-net.pages.dev`
+
+Verification on 2026-08-13 PT:
+
+- `wrangler pages project list` showed `corridorlights.net` and `www.corridorlights.net` attached to `corridorlights-net`.
+- HTTPS requests to both custom domains returned HTTP 200.
 
 ## GitHub
 
