@@ -53,6 +53,9 @@ Verification on 2026-08-13 PT:
 - 2026-08-13: Refinement pass deployed from commit `8f6d6dd`.
 - Deployment preview URL: `https://931b9458.corridorlights-net.pages.dev`
 - Changes: softened header branding, made current navigation clearer, loosened document/photo placeholder layout, added one more music placeholder, and added practical placement comments.
+- 2026-08-13: Browser page title cleanup deployed from commit `52ab2d3`.
+- Deployment preview URL: `https://eb60f84d.corridorlights-net.pages.dev`
+- Changes: replaced `My Beautiful Demons Archive` title tags with quieter `corridorlights` titles.
 
 ## GitHub
 
