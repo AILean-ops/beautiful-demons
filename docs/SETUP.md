@@ -45,6 +45,12 @@ Verification on 2026-08-13 PT:
 - `wrangler pages project list` showed `corridorlights.net` and `www.corridorlights.net` attached to `corridorlights-net`.
 - HTTPS requests to both custom domains returned HTTP 200.
 
+## Site Version Notes
+
+- 2026-08-13: First archival site version built and deployed from commit `3074568`.
+- Deployment preview URL: `https://6824378c.corridorlights-net.pages.dev`
+- Live routes verified HTTP 200: `/`, `/about.html`, `/music.html`, `/documents.html`, `/photos.html`, `/notes.html`, `/contact.html`, `/style.css`.
+
 ## GitHub
 
 GitHub SSH access works through the `github-workspace` host alias.
