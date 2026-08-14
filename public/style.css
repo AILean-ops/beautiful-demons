@@ -18,15 +18,16 @@ body {
 
 .top {
   border-bottom: 1px solid #bdb9aa;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   padding-bottom: 12px;
 }
 
 .site-title {
-  margin: 0 0 6px;
-  font-size: 31px;
+  margin: 0 0 4px;
+  font-size: 21px;
   font-weight: normal;
   line-height: 1.12;
+  letter-spacing: 0;
 }
 
 .site-title a {
@@ -37,7 +38,7 @@ body {
 .tagline {
   margin: 0;
   color: #5d5a51;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .nav {
@@ -53,8 +54,9 @@ body {
 }
 
 .nav a.current {
-  color: #242424;
-  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 main {
@@ -71,7 +73,7 @@ h2 {
   border-bottom: 1px solid #cbc7b9;
   font-size: 18px;
   font-weight: normal;
-  margin: 30px 0 12px;
+  margin: 31px 0 11px;
   padding-bottom: 4px;
 }
 
@@ -128,21 +130,33 @@ a {
 }
 
 .box-row {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .artifact-box {
   background: #f5f4ee;
   border: 1px solid #c9c4b4;
+  margin-bottom: 16px;
   min-height: 128px;
   padding: 12px;
 }
 
+.artifact-box:nth-child(2) {
+  margin-left: 22px;
+  margin-bottom: 20px;
+}
+
+.artifact-box:nth-child(3) {
+  margin-right: 34px;
+  margin-bottom: 13px;
+}
+
+.artifact-box:nth-child(4) {
+  margin-left: 8px;
+}
+
 .artifact-box.tall {
-  min-height: 190px;
+  min-height: 178px;
 }
 
 .placeholder-mark {
@@ -177,7 +191,7 @@ audio {
   }
 
   .site-title {
-    font-size: 27px;
+    font-size: 20px;
   }
 
   .nav a {
@@ -185,7 +199,10 @@ audio {
     margin-right: 9px;
   }
 
-  .box-row {
-    grid-template-columns: 1fr;
+  .artifact-box:nth-child(2),
+  .artifact-box:nth-child(3),
+  .artifact-box:nth-child(4) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
