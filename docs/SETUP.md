@@ -50,6 +50,9 @@ Verification on 2026-08-13 PT:
 - 2026-08-13: First archival site version built and deployed from commit `3074568`.
 - Deployment preview URL: `https://6824378c.corridorlights-net.pages.dev`
 - Live routes verified HTTP 200: `/`, `/about.html`, `/music.html`, `/documents.html`, `/photos.html`, `/notes.html`, `/contact.html`, `/style.css`.
+- 2026-08-13: Refinement pass deployed from commit `8f6d6dd`.
+- Deployment preview URL: `https://931b9458.corridorlights-net.pages.dev`
+- Changes: softened header branding, made current navigation clearer, loosened document/photo placeholder layout, added one more music placeholder, and added practical placement comments.
 
 ## GitHub
 
