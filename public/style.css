@@ -1,0 +1,191 @@
+html {
+  background: #eeeeea;
+  color: #242424;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 26px 18px 32px;
+}
+
+.top {
+  border-bottom: 1px solid #bdb9aa;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+}
+
+.site-title {
+  margin: 0 0 6px;
+  font-size: 31px;
+  font-weight: normal;
+  line-height: 1.12;
+}
+
+.site-title a {
+  color: #242424;
+  text-decoration: none;
+}
+
+.tagline {
+  margin: 0;
+  color: #5d5a51;
+  font-size: 14px;
+}
+
+.nav {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.nav a {
+  color: #4f5f73;
+  margin-right: 12px;
+  text-decoration: underline;
+}
+
+.nav a.current {
+  color: #242424;
+  text-decoration: none;
+}
+
+main {
+  line-height: 1.58;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 16px;
+}
+
+h2 {
+  border-bottom: 1px solid #cbc7b9;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 30px 0 12px;
+  padding-bottom: 4px;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+a {
+  color: #4f5f73;
+}
+
+.note {
+  background: #f7f6f0;
+  border: 1px solid #cfcabb;
+  margin: 18px 0;
+  padding: 12px 14px;
+}
+
+.quiet {
+  color: #666257;
+  font-size: 14px;
+}
+
+.entry {
+  border-bottom: 1px dotted #b8b4a5;
+  margin: 0 0 18px;
+  padding-bottom: 17px;
+}
+
+.entry h2,
+.entry h3 {
+  border: 0;
+  font-size: 18px;
+  margin: 0 0 5px;
+  padding: 0;
+}
+
+.meta {
+  color: #6d695f;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.source {
+  color: #777268;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.archive-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.box-row {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 12px;
+}
+
+.artifact-box {
+  background: #f5f4ee;
+  border: 1px solid #c9c4b4;
+  min-height: 128px;
+  padding: 12px;
+}
+
+.artifact-box.tall {
+  min-height: 190px;
+}
+
+.placeholder-mark {
+  border: 1px dashed #aaa38f;
+  color: #736f65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 92px;
+  padding: 10px;
+  text-align: center;
+}
+
+audio {
+  display: block;
+  margin: 10px 0 6px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.footer {
+  border-top: 1px solid #bdb9aa;
+  color: #666257;
+  font-size: 13px;
+  margin-top: 34px;
+  padding-top: 12px;
+}
+
+@media (max-width: 620px) {
+  .page {
+    padding: 18px 13px 26px;
+  }
+
+  .site-title {
+    font-size: 27px;
+  }
+
+  .nav a {
+    display: inline-block;
+    margin-right: 9px;
+  }
+
+  .box-row {
+    grid-template-columns: 1fr;
+  }
+}
