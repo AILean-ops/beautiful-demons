@@ -133,6 +133,10 @@ a {
   margin-top: 14px;
 }
 
+.artifact-grid {
+  margin-top: 18px;
+}
+
 .artifact-box {
   background: #f5f4ee;
   border: 1px solid #c9c4b4;
@@ -157,6 +161,16 @@ a {
 
 .artifact-box.tall {
   min-height: 178px;
+}
+
+.artifact-box img {
+  background: #e4e1d5;
+  border: 1px solid #d0cbbb;
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 
 .placeholder-mark {
