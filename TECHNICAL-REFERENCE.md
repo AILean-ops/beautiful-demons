@@ -6,8 +6,10 @@
 - Public site files: `public/`
 - Music page: `public/music.html`
 - Documents page: `public/documents.html`
+- Notes page: `public/notes.html`
 - Corridor Lights image assets: `public/assets/corridor-lights/`
 - Audio assets: `public/assets/corridor-lights/audio/`
+- Site update convention: every content addition to the public site gets a matching reverse-chronological entry on `public/notes.html`, written in the same plain archive-log style as the existing notes.
 - Download links use dedicated Cloudflare-visible URLs under `/downloads/corridor-lights/audio/`, mapped to the MP3 assets by `public/_redirects`, so Cloudflare request analytics can count download-link clicks without site-side tracking code.
 - Deploy command: `npm run deploy`
 - Cloudflare zone: `corridorlights.net` (`e79457ade9ee1d608552166b4d355ff1`)
