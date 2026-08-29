@@ -30,6 +30,7 @@
           more than once and can at least partially place. More will be added as
           I finish checking the rest of the tapes and transfers.
         </p>
+        <p><a href="#" id="play-all">Play all in order</a></p>
 
         <section class="entry">
           <h2>We Were the Fire</h2>
@@ -38,6 +39,7 @@
             copies. Exact date and venue not marked on the transfer.
           </p>
           <audio controls preload="none" src="assets/corridor-lights/audio/we-were-the-fire.mp3"></audio>
+          <p><a href="/downloads/corridor-lights/audio/we-were-the-fire.mp3" download>Download (mp3)</a></p>
         </section>
 
         <section class="entry">
@@ -48,6 +50,7 @@
             the file.
           </p>
           <audio controls preload="none" src="assets/corridor-lights/audio/five-against-the-dark.mp3"></audio>
+          <p><a href="/downloads/corridor-lights/audio/five-against-the-dark.mp3" download>Download (mp3)</a></p>
         </section>
 
         <section class="entry">
@@ -58,6 +61,7 @@
             — this has not been confirmed.
           </p>
           <audio controls preload="none" src="assets/corridor-lights/audio/we-are-still-burning.mp3"></audio>
+          <p><a href="/downloads/corridor-lights/audio/we-are-still-burning.mp3" download>Download (mp3)</a></p>
         </section>
 
         <section class="entry">
@@ -67,6 +71,7 @@
             Source tape was unlabeled beyond the song title.
           </p>
           <audio controls preload="none" src="assets/corridor-lights/audio/last-transmission.mp3"></audio>
+          <p><a href="/downloads/corridor-lights/audio/last-transmission.mp3" download>Download (mp3)</a></p>
         </section>
 
         <section class="entry">
@@ -76,6 +81,7 @@
             versions. Moderate tape hiss and loss of brightness. Feels private.
           </p>
           <audio controls preload="none" src="assets/corridor-lights/audio/paper-crowns-eli-acoustic-demo.mp3"></audio>
+          <p><a href="/downloads/corridor-lights/audio/paper-crowns-eli-acoustic-demo.mp3" download>Download (mp3)</a></p>
         </section>
 
         <section class="entry">
@@ -86,6 +92,7 @@
             this copy is still unclear.
           </p>
           <audio controls preload="none" src="assets/corridor-lights/audio/we-run-this.mp3"></audio>
+          <p><a href="/downloads/corridor-lights/audio/we-run-this.mp3" download>Download (mp3)</a></p>
         </section>
 
         <section class="entry">
@@ -96,6 +103,7 @@
             down before the end. Left as found.
           </p>
           <audio controls preload="none" src="assets/corridor-lights/audio/untitled-spankys-6-87.mp3"></audio>
+          <p><a href="/downloads/corridor-lights/audio/untitled-spankys-6-87.mp3" download>Download (mp3)</a></p>
         </section>
       </main>
 
@@ -103,5 +111,50 @@
         Recordings will be added slowly, with whatever source notes I can preserve.
       </footer>
     </div>
+    <script>
+      var playAll = document.getElementById("play-all");
+      var tracks = document.querySelectorAll("main audio");
+      var currentTrack = 0;
+      var playAllActive = false;
+      var playlistPlayRequested = false;
+
+      function playTrack(number) {
+        if (number >= tracks.length) {
+          playAllActive = false;
+          return;
+        }
+        currentTrack = number;
+        playlistPlayRequested = true;
+        tracks[currentTrack].play();
+      }
+
+      playAll.onclick = function(event) {
+        event.preventDefault();
+        for (var i = 0; i < tracks.length; i++) {
+          tracks[i].pause();
+          tracks[i].currentTime = 0;
+        }
+        playAllActive = true;
+        playTrack(0);
+      };
+
+      for (var i = 0; i < tracks.length; i++) {
+        tracks[i].dataset.trackNumber = i;
+        tracks[i].onplay = function() {
+          var trackNumber = parseInt(this.dataset.trackNumber, 10);
+          if (playlistPlayRequested && trackNumber === currentTrack) {
+            playlistPlayRequested = false;
+          } else {
+            playAllActive = false;
+            currentTrack = trackNumber;
+          }
+        };
+        tracks[i].onended = function() {
+          if (playAllActive) {
+            playTrack(currentTrack + 1);
+          }
+        };
+      }
+    </script>
   </body>
 </html>

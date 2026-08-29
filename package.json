@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "/Users/aileansolutions/meetings-maestro/node_modules/.bin/wrangler pages dev public",
     "deploy": "/Users/aileansolutions/meetings-maestro/node_modules/.bin/wrangler pages deploy public --project-name corridorlights-net --branch main",
-    "deploy:preview": "/Users/aileansolutions/meetings-maestro/node_modules/.bin/wrangler pages deploy public --project-name corridorlights-net --branch preview"
+    "deploy:preview": "/Users/aileansolutions/meetings-maestro/node_modules/.bin/wrangler pages deploy public --project-name corridorlights-net --branch preview",
+    "traffic": "node ops/cloudflare-traffic-report.mjs --hours 24 --write-last-run",
+    "inbox:init": "python3 ops/proton_inbox_monitor.py --init",
+    "inbox:check": "python3 ops/proton_inbox_monitor.py"
   }
 }
